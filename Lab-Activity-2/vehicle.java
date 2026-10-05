@@ -2,24 +2,34 @@ public class vehicle{
    String brand;
    String model;
    int year;
-   int age= 0;
+   
+   
+   
+   vehicle(String brand, int year, String model){
+      
+      this.brand= brand;
+      this.year= year;
+      this.model= model;
+  
+  
+  }
    
    void displayInfo(){
-        calculateAge();
+        
         System.out.println(brand + " " + model);
-        System.out.println("Age: " + age);
+        System.out.println("Age: " + year);
         System.out.println("Vintage: " + isVintage()+"\n");
       
    }
    
    int calculateAge(){
       
-      age = 2026 - year;
-      return age;
+      year = 2026 - year;
+      return year;
    }
    
    boolean isVintage(){
-      if(age > 25){
+      if(year > 25){
         return true;
       }
       else{

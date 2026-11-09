@@ -1,10 +1,8 @@
-public class vehicle{
+public abstract class vehicle{
    
    private String brand;
    private String model;
    private int year;
-   
-   
    
    vehicle(String brand, int year, String model){
       
@@ -14,6 +12,7 @@ public class vehicle{
   
   
   }
+  
   public void displayInfo(){
       System.out.println("Brand: "+brand);
       System.out.println("Model:"+ model);
@@ -40,15 +39,22 @@ public class vehicle{
    }
    
    public boolean isVintage(){
-      /*if(year >= 25){
+      if(calculateAge() >= 25){
         return true;
       }
       else{
          return false;
       }
-      */
-      return calculateAge() <=25;
+      
      
     }
+    
+    public abstract void moveForward();
+    public abstract void moveBackward();
+    public abstract void moveLeft();
+    public abstract void moveRight();
+
+         
+    
 
 }

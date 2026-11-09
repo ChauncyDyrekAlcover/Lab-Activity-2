@@ -4,6 +4,12 @@ public class Main{
         
    
    }   
+   public static void printMovement(vehicle vehicle){
+      vehicle.moveForward();
+      vehicle.moveBackward();
+      vehicle.moveLeft();
+      vehicle.moveRight();
+      } 
    public static void main(String[] args){
      
      
@@ -36,9 +42,14 @@ public class Main{
          new truck("Nissan",2010,"Frontier",4)
        };
        for(vehicle coll: washu){
-            printAll(coll);  
+            printAll(coll); 
+            printMovement(coll);
             System.out.println();
          }
-       
+         
+         
+            
+            
+
    }
 }

@@ -10,6 +10,10 @@ public class Main{
       vehicle.moveLeft();
       vehicle.moveRight();
       } 
+    public static void performService(serviceable item){
+         item.service();
+    }
+    
    public static void main(String[] args){
      
      
@@ -27,12 +31,12 @@ public class Main{
             
        System.out.println("One method different types: ");
        
-       car luxury= new car("GTR",1969,"Hakosuka",4);
-         printAll(luxury);
+       car car= new car("GTR",1969,"Hakosuka",4);
+         printAll(car);
        motorcycle motor=new motorcycle("Honda",2021,"Beat","CVT");
          printAll(motor);
-       truck saks= new truck("Ford",2024,"Raptor",4);
-         printAll(saks);       
+       truck truck= new truck("Ford",2024,"Raptor",4);
+         printAll(truck);       
        
        System.out.println("Mixed arrays");
        
@@ -45,6 +49,19 @@ public class Main{
             printAll(coll); 
             printMovement(coll);
             System.out.println();
+         }
+         
+         printer printer= new printer();
+         serviceable[] items = {car,
+                            truck,
+                            motor,
+                            printer
+                            };
+                            
+                 
+        for(serviceable item: items){
+            performService(item);
+            
          }
          
          

@@ -1,4 +1,4 @@
-public class motorcycle extends vehicle{
+public class motorcycle extends vehicle implements serviceable{
    
    private String transmissionType;
    
@@ -32,6 +32,11 @@ public class motorcycle extends vehicle{
    public void moveLeft(){
       System.out.println("the motor moved left");
    } 
+   @Override
+    public void service(){
+      System.out.println("Your motorcycle need service.");
+    }
+
 
 
 

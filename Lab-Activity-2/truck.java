@@ -1,4 +1,4 @@
-public class truck extends vehicle{
+public class truck extends vehicle implements serviceable{
    private int numberOfDoors;
    
    public truck(String brand, int year, String model,int numberOfDoors){
@@ -32,7 +32,10 @@ public class truck extends vehicle{
       System.out.println("the truck moved left");
    } 
 
-
+    @Override
+    public void service(){
+      System.out.println("Your Truck need service.");
+    }
 
 
 
